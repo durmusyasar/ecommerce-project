@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap' ;
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { HttpClientModule } from '@angular/common/http'
@@ -14,6 +14,8 @@ import { CartDetailComponent } from './components/cart-detail/cart-detail.compon
 import { CheckoutComponent } from './components/checkout/checkout.component'
 import { ReactiveFormsModule } from '@angular/forms';
 import '@angular/compiler';
+import { Luv2ShopValidatorsComponent } from './validators/luv2-shop-validators/luv2-shop-validators.component';
+
 
 const routes: Routes = [
   { path: 'category/:id', component: ProductsListComponent },
@@ -23,9 +25,9 @@ const routes: Routes = [
   { path: 'products/:id', component: ProductDetailsComponent },
   { path: 'cart-details', component: CartDetailComponent },
   { path: 'checkout', component: CheckoutComponent },
-  { path: '', redirectTo: '/products', pathMatch: 'full'},
-  { path: '**', redirectTo: '/products', pathMatch: 'full'},
-]
+  { path: '', redirectTo: '/products', pathMatch: 'full' },
+  { path: '**', redirectTo: '/products', pathMatch: 'full' },
+];
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ const routes: Routes = [
     ProductDetailsComponent,
     CartStatusComponent,
     CartDetailComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    Luv2ShopValidatorsComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
